@@ -1,0 +1,13 @@
+/* Layout */
+
+#container {
+    width: 1200px;
+    display: flex;
+}
+[id^="arrow"] {
+    width: 50px;
+}
+
+#main {
+    flex-grow: 1;
+}
