@@ -1,13 +1,32 @@
 /* Layout */
 
 #container {
-    width: 1200px;
-    display: flex;
-}
-[id^="arrow"] {
-    width: 50px;
+    width: 1100px;
+    height: 100%;
+    display: block;
 }
 
-#main {
+#viewer {
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+
+[id^="arrow"] {
+    width: 50px;
+    height: 100%;
+    background: royalblue;
+}
+
+main {
+    height: 100%;
+    background: seagreen;
     flex-grow: 1;
+}
+
+#navigation {
+    height: 200px;
+    width: 100%;
+    background: slateblue;
+    display: block;
 }
