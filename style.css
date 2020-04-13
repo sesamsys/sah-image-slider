@@ -1,8 +1,17 @@
 /* Layout */
 
-#container {
+main {
     width: 1100px;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#container {
+    height: 600px;
+    width: 1100px;
     display: block;
 }
 
@@ -18,7 +27,7 @@
     background: royalblue;
 }
 
-main {
+#photo {
     height: 100%;
     background: seagreen;
     flex-grow: 1;
@@ -26,7 +35,7 @@ main {
 
 #navigation {
     height: 200px;
-    width: 100%;
+    width: 1100px;
     background: slateblue;
     display: block;
 }
