@@ -37,7 +37,7 @@ main {
 
 #photo {
     height: 100%;
-    background: seagreen;
+    background-image: url(./assets/gallery_1.jpg);
     flex-grow: 1;
 }
 
