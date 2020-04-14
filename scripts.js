@@ -59,6 +59,7 @@ let load_thumbnails = () => {
 
 load_thumbnails();
 
-$("[id^=thumbnail]").click(() => {
-
+$("[id^=thumbnail]").click((event) => {
+    current = String($(event.target).attr('id')).charAt(9);
+    load_photo(current);
 });
