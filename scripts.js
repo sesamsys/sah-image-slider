@@ -15,6 +15,11 @@ let data = [
         photo: "./assets/gallery_3.jpg",
         title: "Bergen",
         description: "Bergen dekket av skyer som vanlig." 
+    },
+    {
+        photo: "./assets/gallery_4.jpg",
+        title: "Oslo",
+        description: "Operahuset er den mest ikoniske bygningen av hovedstaden." 
     }
 ];
 
