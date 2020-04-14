@@ -49,3 +49,13 @@ $('#arrow-right').click(() => {
     }
     load_photo(current);
 });
+
+let load_thumbnails = () => {
+    for (let index = 0; index < data.length; index++) {
+            $('#navigation').append('<div id="thumbnail'+index+'"></div>');
+            $('#thumbnail'+index).css("background-image", "url("+data[index].photo+")");
+        };
+        
+    }
+
+load_thumbnails();

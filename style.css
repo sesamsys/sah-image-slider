@@ -81,10 +81,13 @@ main {
     justify-content: center;
 }
 
-#thumbnail {
-    border: 0;
+[id^=thumbnail] {
     height: 60px;
     width: 60px;
     background-color: white;
     margin: 10px;
+    background-size: 180px;
+    background-position: 50% 50%;
+    background-clip: content-box;
+    border: 5px solid white;
 }
