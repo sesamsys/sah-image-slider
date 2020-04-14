@@ -78,12 +78,13 @@ main {
     width: 1100px;
     background: transparent;
     display: flex;
+    justify-content: center;
 }
 
 #thumbnail {
     border: 0;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     background-color: white;
-    margin-top: 10px;
+    margin: 10px;
 }
