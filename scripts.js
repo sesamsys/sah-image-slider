@@ -23,7 +23,7 @@ let data = [
     }
 ];
 
-function load_photo(id) {
+let load_photo = (id) => {
     current = id;
     $('#photo').css("background-image", "url("+data[id].photo+")");
     $('#title').text(data[id].title);
@@ -32,7 +32,7 @@ function load_photo(id) {
 
 load_photo(current);
 
-$('#arrow-left').click(function left(){
+$('#arrow-left').click(() => {
     if (current === 0) {
         current = data.length-1;
     } else {
@@ -41,7 +41,7 @@ $('#arrow-left').click(function left(){
     load_photo(current);
 });
 
-$('#arrow-right').click(function right(){
+$('#arrow-right').click(() => {
     if (current === data.length-1) {
         current = 0
     } else {
