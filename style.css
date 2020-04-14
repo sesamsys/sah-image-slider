@@ -46,13 +46,6 @@ main {
     align-items: flex-end;
 }
 
-#description {
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-grow: 1;
-    padding-left: 30px;
-}
-
 #navigation {
     height: 200px;
     width: 1100px;
@@ -60,10 +53,26 @@ main {
     display: block;
 }
 
+#description {
+    width: 100%;
+}
+
 /* Fonts */
 
-h1, p {
+#description h1, p {
     color: white;
     margin: 0;
     font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    width: inherit;
+}
+
+#description h1 {
+    padding: 10px 0px 5px 20px;
+    line-height: 1em;
+}
+
+#description p {
+    padding: 0px 0px 10px 20px;
 }
