@@ -11,6 +11,11 @@ let data = [
         title: "Trondheim",
         description: "Tradisjonelle hus ved siden av Nidelva." 
     }
+    {
+        photo: "./assets/gallery_3.jpg",
+        title: "Bergen",
+        description: "Bergen dekket av skyer som vanlig." 
+    }
 ];
 
 function load_photo(id) {
