@@ -10,7 +10,7 @@ let data = [
         photo: "./assets/gallery_2.jpg",
         title: "Trondheim",
         description: "Tradisjonelle hus ved siden av Nidelva." 
-    }
+    },
     {
         photo: "./assets/gallery_3.jpg",
         title: "Bergen",
@@ -26,3 +26,21 @@ function load_photo(id) {
 }
 
 load_photo(current);
+
+$('#arrow-left').click(function left(){
+    if (current === 0) {
+        current = data.length-1;
+    } else {
+        current--;
+    }
+    load_photo(current);
+});
+
+$('#arrow-right').click(function right(){
+    if (current === data.length-1) {
+        current = 0
+    } else {
+        current++;
+    }
+    load_photo(current);
+});
