@@ -51,11 +51,14 @@ $('#arrow-right').click(() => {
 });
 
 let load_thumbnails = () => {
-    for (let index = 0; index < data.length; index++) {
-            $('#navigation').append('<div id="thumbnail'+index+'"></div>');
-            $('#thumbnail'+index).css("background-image", "url("+data[index].photo+")");
-        };
-        
-    }
+    data.forEach((item, index) => {
+        $('#navigation').append('<div id="thumbnail'+index+'"></div>');
+        $('#thumbnail'+index).css("background-image", "url("+item.photo+")");
+    });
+};
 
 load_thumbnails();
+
+$("[id^=thumbnail]").click(() => {
+
+});
