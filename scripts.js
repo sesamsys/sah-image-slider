@@ -33,7 +33,7 @@ let load_photo = (id) => {
 load_photo(current);
 
 $('#arrow-left').click(() => {
-    if (current === 0) {
+    if (current == 0) {
         current = data.length-1;
     } else {
         current--;
@@ -42,8 +42,8 @@ $('#arrow-left').click(() => {
 });
 
 $('#arrow-right').click(() => {
-    if (current === data.length-1) {
-        current = 0
+    if (current == data.length-1) {
+        current = 0;
     } else {
         current++;
     }
