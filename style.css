@@ -96,9 +96,21 @@ main {
     background-position: 50% 50%;
     background-clip: content-box;
     border: 5px solid white;
+    position: relative;
 }
 
 [id^=thumbnail]:hover {
     cursor: pointer;
 }
-  
+
+.selected::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    position: absolute;
+    top: -13px;
+    left: 22px;
+  }

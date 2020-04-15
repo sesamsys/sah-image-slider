@@ -41,10 +41,12 @@ let load_photo = (id) => {
         "margin": "20px 10px",
         "box-shadow": "0px 20px 20px -17px black"
     });
+    $('[id^=thumbnail]').attr("class","");
     $('[id^=thumbnail][data-number="'+id+'"]').css({
         "margin": "16px 10px",
         "box-shadow": "0px 20px 20px -12px black"
     });
+    $('[id^=thumbnail][data-number="'+id+'"]').attr("class","selected");
 }
 
 load_photo(current);
