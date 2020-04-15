@@ -89,7 +89,7 @@ main {
     justify-content: center;
 }
 
-[id^=thumbnail] {
+.thumbnail {
     height: 60px;
     width: 60px;
     background-size: 180px;
@@ -97,10 +97,17 @@ main {
     background-clip: content-box;
     border: 5px solid white;
     position: relative;
+    margin: 20px 10px;
+    box-shadow: 0px 20px 20px -17px black;
 }
 
-[id^=thumbnail]:hover {
+.thumbnail:hover {
     cursor: pointer;
+}
+
+.selected {
+    margin: 16px 10px;
+    box-shadow: 0px 20px 20px -12px black;
 }
 
 .selected::before {

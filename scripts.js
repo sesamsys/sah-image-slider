@@ -25,7 +25,7 @@ let data = [
 
 let load_thumbnails = () => {
     data.forEach((item, index) => {
-        $('#navigation').append('<div id="thumbnail'+index+'" data-number="'+index+'"></div>');
+        $('#navigation').append('<div class="thumbnail" id="thumbnail'+index+'" data-number="'+index+'"></div>');
         $('[id^=thumbnail][data-number="'+index+'"]').css("background-image", "url("+item.photo+")");
     });
 };
@@ -37,16 +37,8 @@ let load_photo = (id) => {
     $('#photo').css("background-image", "url("+data[id].photo+")");
     $('#title').text(data[id].title);
     $('#text').text(data[id].description);
-    $('[id^=thumbnail]').css({
-        "margin": "20px 10px",
-        "box-shadow": "0px 20px 20px -17px black"
-    });
-    $('[id^=thumbnail]').attr("class","");
-    $('[id^=thumbnail][data-number="'+id+'"]').css({
-        "margin": "16px 10px",
-        "box-shadow": "0px 20px 20px -12px black"
-    });
-    $('[id^=thumbnail][data-number="'+id+'"]').attr("class","selected");
+    $('[id^=thumbnail]').attr("class","thumbnail");
+    $('[id^=thumbnail][data-number="'+id+'"]').attr("class", "thumbnail selected");
 }
 
 load_photo(current);
