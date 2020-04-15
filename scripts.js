@@ -52,14 +52,14 @@ $('#arrow-right').click(() => {
 
 let load_thumbnails = () => {
     data.forEach((item, index) => {
-        $('#navigation').append('<div id="thumbnail'+index+'"></div>');
-        $('#thumbnail'+index).css("background-image", "url("+item.photo+")");
+        $('#navigation').append('<div id="thumbnail" data-number="'+index+'"></div>');
+        ($('#thumbnail[data-number="'+index+'"]').css("background-image", "url("+item.photo+")"));
     });
 };
 
 load_thumbnails();
 
 $("[id^=thumbnail]").click((event) => {
-    current = String($(event.target).attr('id')).charAt(9);
+    current = $(event.target).attr('data-number');
     load_photo(current);
 });
