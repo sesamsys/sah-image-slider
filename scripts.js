@@ -23,11 +23,24 @@ let data = [
     }
 ];
 
+let load_thumbnails = () => {
+    data.forEach((item, index) => {
+        $('#navigation').append('<div id="thumbnail'+index+'" data-number="'+index+'"></div>');
+        $('[id^=thumbnail][data-number="'+index+'"]').css("background-image", "url("+item.photo+")");
+    });
+};
+
+load_thumbnails();
+
 let load_photo = (id) => {
     current = id;
     $('#photo').css("background-image", "url("+data[id].photo+")");
     $('#title').text(data[id].title);
     $('#text').text(data[id].description);
+    $('[id^=thumbnail]').css("margin","20px 10px");
+    $('[id^=thumbnail]').css("box-shadow", "0px 20px 20px -17px black");
+    $('[id^=thumbnail][data-number="'+id+'"]').css("margin","16px 10px");
+    $('[id^=thumbnail][data-number="'+id+'"]').css("box-shadow", "0px 20px 20px -12px black");
 }
 
 load_photo(current);
@@ -49,15 +62,6 @@ $('#arrow-right').click(() => {
     }
     load_photo(current);
 });
-
-let load_thumbnails = () => {
-    data.forEach((item, index) => {
-        $('#navigation').append('<div id="thumbnail" data-number="'+index+'"></div>');
-        $('#thumbnail[data-number="'+index+'"]').css("background-image", "url("+item.photo+")");
-    });
-};
-
-load_thumbnails();
 
 $("[id^=thumbnail]").click((event) => {
     current = $(event.target).attr('data-number');
