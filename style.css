@@ -35,6 +35,14 @@ main {
     background: linear-gradient(white, rgb(227,227,227));
 }
 
+[id^="arrow"]:hover {
+    cursor: pointer;
+}
+
+[id^="arrow"]:hover img {
+    filter: opacity(0.5);
+}
+
 [id$="right"] img {
     transform: rotate(0.5turn);
 }
@@ -88,5 +96,9 @@ main {
     background-position: 50% 50%;
     background-clip: content-box;
     border: 5px solid white;
-    box-shadow: 0px 20px 20px -17px rgba(0, 0, 0, 1);
 }
+
+[id^=thumbnail]:hover {
+    cursor: pointer;
+}
+  
