@@ -53,7 +53,7 @@ $('#arrow-right').click(() => {
 let load_thumbnails = () => {
     data.forEach((item, index) => {
         $('#navigation').append('<div id="thumbnail" data-number="'+index+'"></div>');
-        ($('#thumbnail[data-number="'+index+'"]').css("background-image", "url("+item.photo+")"));
+        $('#thumbnail[data-number="'+index+'"]').css("background-image", "url("+item.photo+")");
     });
 };
 
