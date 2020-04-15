@@ -37,10 +37,14 @@ let load_photo = (id) => {
     $('#photo').css("background-image", "url("+data[id].photo+")");
     $('#title').text(data[id].title);
     $('#text').text(data[id].description);
-    $('[id^=thumbnail]').css("margin","20px 10px");
-    $('[id^=thumbnail]').css("box-shadow", "0px 20px 20px -17px black");
-    $('[id^=thumbnail][data-number="'+id+'"]').css("margin","16px 10px");
-    $('[id^=thumbnail][data-number="'+id+'"]').css("box-shadow", "0px 20px 20px -12px black");
+    $('[id^=thumbnail]').css({
+        "margin": "20px 10px",
+        "box-shadow": "0px 20px 20px -17px black"
+    });
+    $('[id^=thumbnail][data-number="'+id+'"]').css({
+        "margin": "16px 10px",
+        "box-shadow": "0px 20px 20px -12px black"
+    });
 }
 
 load_photo(current);
