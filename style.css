@@ -107,6 +107,10 @@ main {
     cursor: pointer;
 }
 
+.unselected:hover div {
+    visibility: visible;
+}
+
 .selected {
     margin: 16px 10px;
     box-shadow: 0px 20px 20px -12px black;
