@@ -25,7 +25,9 @@ let data = [
 
 let load_thumbnails = () => {
     data.forEach((item, index) => {
-        $('#navigation').append('<div class="thumbnail" id="thumbnail'+index+'" data-number="'+index+'"></div>');
+        $('#navigation').append(
+            '<div class="thumbnail" id="thumbnail'+index+'" data-number="'+index+'"><div class="tooltip" id="tooltip'+index+'">'+item.title+'</div></div>'
+        );
         $('[id^=thumbnail][data-number="'+index+'"]').css("background-image", "url("+item.photo+")");
     });
 };
@@ -39,7 +41,7 @@ let load_photo = (id) => {
     $('#text').text(data[id].description);
     $('[id^=thumbnail]').attr("class","thumbnail");
     $('[id^=thumbnail][data-number="'+id+'"]').attr("class", "thumbnail selected");
-}
+};
 
 load_photo(current);
 
@@ -65,3 +67,17 @@ $("[id^=thumbnail]").click((event) => {
     current = $(event.target).attr('data-number');
     load_photo(current);
 });
+
+let set_tooltips = () => {
+    data.forEach((item, index) => {
+        console.log($('[id=tooltip'+index+']').css('width'));
+        tmp = $('[id=tooltip'+index+']').css('width');
+        tmp = 60-(parseInt(tmp)+15);
+        tmp = tmp/2;
+        left = Math.round(tmp);
+        console.log(left);
+        $('[id=tooltip'+index+']').css('left',left);
+    });
+};
+
+set_tooltips();
